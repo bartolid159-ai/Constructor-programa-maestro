@@ -1,11 +1,14 @@
-import { describe, it, expect, beforeAll } from 'vitest';
+import { describe, it, expect, beforeEach } from 'vitest';
 import { login, register } from '../../src/auth.js';
 import { getDb } from '../../src/db.js';
 
 describe('Local Authentication System', () => {
-  beforeAll(() => {
+  beforeEach(async () => {
+    const db = getDb();
+    // Clear users to ensure a clean state
+    db.exec('DELETE FROM users');
     // Setup initial user for testing
-    register('admin', 'password123');
+    await register('admin', 'password123');
   });
 
   it('should reject incorrect passwords', async () => {

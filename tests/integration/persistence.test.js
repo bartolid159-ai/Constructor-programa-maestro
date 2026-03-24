@@ -7,7 +7,7 @@ describe('SQLite Local Persistence', () => {
     // For this specific test, we'll use a temporary file to simulate the behavior requested.
     const testDbPath = 'test-data/persistence.db';
     
-    // Ensure test-data exists (mkdir -p was already called, but just in case)
+    // Ensure the directory exists (now handled by getDb, but we stay explicit about the path)
     const db1 = getDb(testDbPath);
     
     // Clear the table first

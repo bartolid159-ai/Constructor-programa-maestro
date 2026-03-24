@@ -1,12 +1,20 @@
 import Database from 'better-sqlite3';
 import path from 'path';
+import fs from 'fs';
 
 let db;
 
 export function getDb(dbPath = process.env.NODE_ENV === 'test' ? ':memory:' : 'data.db') {
   if (db) return db;
   
-  // In a real local-first app, we might want to ensure the directory exists
+  // Ensure the directory exists if it's a file path
+  if (dbPath !== ':memory:' && !dbPath.startsWith(':memory:')) {
+    const dir = path.dirname(dbPath);
+    if (!fs.existsSync(dir)) {
+      fs.mkdirSync(dir, { recursive: true });
+    }
+  }
+
   db = new Database(dbPath);
   db.pragma('journal_mode = WAL');
   
