@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.0](https://github.com/bartolid159-ai/Constructor-programa-maestro/compare/v1.0.0...v1.1.0) (2026-03-24)
+
+
+### Features
+
+* configuración final de release please ([dec75ff](https://github.com/bartolid159-ai/Constructor-programa-maestro/commit/dec75ff0563cf97dd3a40e44657673d98aad0c8c))
+
 ## 1.0.0 (2026-03-24)
 
 
