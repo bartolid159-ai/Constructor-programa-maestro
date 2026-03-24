@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.2.0](https://github.com/bartolid159-ai/Constructor-programa-maestro/compare/v1.1.0...v1.2.0) (2026-03-24)
+
+
+### Features
+
+* fix release-please v4 configuration ([5abe3a2](https://github.com/bartolid159-ai/Constructor-programa-maestro/commit/5abe3a25b51cf57077df3cca9b539fc7aebd886d))
+* sincronizar identidad del paquete para activar release please ([84f7a77](https://github.com/bartolid159-ai/Constructor-programa-maestro/commit/84f7a77654216c378b2ead4d60415c6b39b3961c))
+
 ## [1.1.0](https://github.com/bartolid159-ai/Constructor-programa-maestro/compare/v1.0.0...v1.1.0) (2026-03-24)
 
 
